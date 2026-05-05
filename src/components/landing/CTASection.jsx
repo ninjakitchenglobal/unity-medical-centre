@@ -1,16 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Clock, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Phone, Clock, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CONTACT_ITEMS = [
-  { icon: Phone, label: "Emergency Line", value: "+1 (573) 865-5984" },
-  { icon: Clock, label: "Working Hours", value: "Mon - Sat: 8AM - 8PM" },
-  { icon: MapPin, label: "Location", value: "123 Health Avenue, NY" },
+  { icon: Phone, label: 'Emergency Line', value: '+1 (573) 865-5984' },
+  { icon: Clock, label: 'Working Hours', value: 'Mon - Sat: 8AM - 8PM' },
+  {
+    icon: MapPin,
+    label: 'Location',
+    value: 'Meilahden sairaala 00290 Helsinki',
+  },
 ];
 
 const CTASection = () => {
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-primary relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 lg:py-28 bg-primary relative overflow-hidden"
+    >
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
@@ -29,8 +36,9 @@ const CTASection = () => {
               Ready To Get Started With Better Healthcare?
             </h2>
             <p className="text-primary-foreground/80 leading-relaxed max-w-lg">
-              Schedule your appointment today and take the first step towards a healthier you. 
-              Our team is ready to provide you with world-class medical care.
+              Schedule your appointment today and take the first step towards a
+              healthier you. Our team is ready to provide you with world-class
+              medical care.
             </p>
             <Button
               size="lg"
@@ -58,8 +66,12 @@ const CTASection = () => {
                   <item.icon className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-sm text-primary-foreground/70">{item.label}</div>
-                  <div className="text-lg font-semibold text-primary-foreground">{item.value}</div>
+                  <div className="text-sm text-primary-foreground/70">
+                    {item.label}
+                  </div>
+                  <div className="text-lg font-semibold text-primary-foreground">
+                    {item.value}
+                  </div>
                 </div>
               </div>
             ))}
@@ -68,6 +80,6 @@ const CTASection = () => {
       </div>
     </section>
   );
-}
+};
 
-export default CTASection
+export default CTASection;
